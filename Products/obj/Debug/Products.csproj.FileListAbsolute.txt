@@ -51,6 +51,8 @@ D:\GitHub\WirelessMediaTask\Products\bin\roslyn\vbc.rsp
 D:\GitHub\WirelessMediaTask\Products\bin\roslyn\VBCSCompiler.exe
 D:\GitHub\WirelessMediaTask\Products\bin\roslyn\VBCSCompiler.exe.config
 D:\GitHub\WirelessMediaTask\Products\bin\Antlr3.Runtime.dll
+D:\GitHub\WirelessMediaTask\Products\bin\EntityFramework.dll
+D:\GitHub\WirelessMediaTask\Products\bin\EntityFramework.SqlServer.dll
 D:\GitHub\WirelessMediaTask\Products\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\GitHub\WirelessMediaTask\Products\bin\Microsoft.Web.Infrastructure.dll
 D:\GitHub\WirelessMediaTask\Products\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ D:\GitHub\WirelessMediaTask\Products\bin\System.Web.WebPages.Deployment.dll
 D:\GitHub\WirelessMediaTask\Products\bin\System.Web.WebPages.dll
 D:\GitHub\WirelessMediaTask\Products\bin\System.Web.WebPages.Razor.dll
 D:\GitHub\WirelessMediaTask\Products\bin\WebGrease.dll
+D:\GitHub\WirelessMediaTask\Products\bin\EntityFramework.xml
+D:\GitHub\WirelessMediaTask\Products\bin\EntityFramework.SqlServer.xml
 D:\GitHub\WirelessMediaTask\Products\bin\System.Web.Helpers.xml
 D:\GitHub\WirelessMediaTask\Products\bin\System.Web.Mvc.xml
 D:\GitHub\WirelessMediaTask\Products\bin\System.Web.Optimization.xml
@@ -72,8 +76,10 @@ D:\GitHub\WirelessMediaTask\Products\bin\System.Web.WebPages.Razor.xml
 D:\GitHub\WirelessMediaTask\Products\bin\Newtonsoft.Json.xml
 D:\GitHub\WirelessMediaTask\Products\bin\Antlr3.Runtime.pdb
 D:\GitHub\WirelessMediaTask\Products\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\GitHub\WirelessMediaTask\Products\obj\Debug\Products.csproj.AssemblyReference.cache
+D:\GitHub\WirelessMediaTask\Products\obj\Debug\Products.Migrations.IntialMigration.resources
+D:\GitHub\WirelessMediaTask\Products\obj\Debug\Products.csproj.GenerateResource.cache
 D:\GitHub\WirelessMediaTask\Products\obj\Debug\Products.csproj.CoreCompileInputs.cache
 D:\GitHub\WirelessMediaTask\Products\obj\Debug\Products.csproj.CopyComplete
 D:\GitHub\WirelessMediaTask\Products\obj\Debug\Products.dll
 D:\GitHub\WirelessMediaTask\Products\obj\Debug\Products.pdb
-D:\GitHub\WirelessMediaTask\Products\obj\Debug\Products.csproj.AssemblyReference.cache
