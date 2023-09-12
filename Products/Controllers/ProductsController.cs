@@ -3,6 +3,7 @@ using Products.Models;
 using System.Web.Mvc;
 using System;
 using System.Linq;
+using System.Data.Entity;
 
 namespace Products.Controllers
 {
@@ -48,7 +49,7 @@ namespace Products.Controllers
 
                 ViewBag.Message = "Product is created.";
 
-                return View("~/Views/Products/CreateProductView.cshtml");
+                return RedirectToAction("Index") /*View("~/Views/Products/CreateProductView.cshtml")*/;
             }
             catch(Exception e)
             {
@@ -57,6 +58,63 @@ namespace Products.Controllers
                 return View("~/Views/Products/CreateProductView.cshtml");
             }
                  
+        }
+
+     
+        public ActionResult EditProduct(int id)
+        {
+            var product = _dbContext.Products.Find(id);
+            if (product == null)
+                return View();
+            
+            return View("~/Views/Products/EditProductView.cshtml",product);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Product editedProduct)
+        {
+            var product = _dbContext.Products.Find(editedProduct.Id);
+            if (product == null)
+                return View();
+
+            _dbContext.Entry(product).State = EntityState.Modified;
+
+            product.Id = editedProduct.Id;
+            product.Name = editedProduct.Name;
+            product.Description = editedProduct.Description;
+            product.Category = editedProduct.Category;
+            product.Manufacturer = editedProduct.Manufacturer;
+            product.Supplier = editedProduct.Supplier;
+            product.Price = editedProduct.Price;
+             
+            _dbContext.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Remove(int id)
+        {
+            var product = _dbContext.Products.Find(id);
+            if (product == null)
+                return View();
+
+            return View("~/Views/Products/DeleteProductView.cshtml",product);
+        }
+
+       [HttpPost]
+        public ActionResult DeleteProduct(int id)
+        {
+            var product = _dbContext.Products.Find(id);
+            if (product == null)
+                return View();
+
+            _dbContext.Entry(product).State = EntityState.Deleted;
+            _dbContext.Products.Remove(product);
+            _dbContext.SaveChanges();
+
+            ViewBag.Message = "Product is deleted.";
+
+            return View("~/Views/Products/DeleteProductView.cshtml",product);
         }
     }
 }
