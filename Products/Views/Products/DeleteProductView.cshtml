@@ -74,21 +74,16 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Price)
+            @Html.DisplayFor(model => model.Price) RSD
         </dd>
 
     </dl>
+    <div class="form-actions no-color">
+        <form action="/Products/DeleteProduct/@Model.Id" method="post">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </form>
 
-    @*@using (Html.BeginForm())
-    {*@
-        @*@Html.AntiForgeryToken()*@
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 
-        <div class="form-actions no-color">
-            <form action="/Products/DeleteProduct/@Model.Id" method="post">
-                <input type="submit" value="Delete" class="btn btn-default" />
-            </form>
-             
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    @*}*@
 </div>

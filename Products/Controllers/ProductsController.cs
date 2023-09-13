@@ -49,19 +49,17 @@ namespace Products.Controllers
 
                 ViewBag.Message = "Product is created.";
 
-                return RedirectToAction("Index") /*View("~/Views/Products/CreateProductView.cshtml")*/;
+                return RedirectToAction("Index");
             }
             catch(Exception e)
             {
                 ViewBag.Message = e.Message;
 
                 return View("~/Views/Products/CreateProductView.cshtml");
-            }
-                 
+            }                
         }
-
-     
-        public ActionResult EditProduct(int id)
+    
+        public ActionResult Edit(int id)
         {
             var product = _dbContext.Products.Find(id);
             if (product == null)
